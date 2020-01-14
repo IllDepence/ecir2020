@@ -1,0 +1,524 @@
+### notes
+- Recall: count correct claims (✓) as 1 and kind of correct ones (△) as .5
+          total is number of claims identified by hand
+- Precision: count correct claims (✓)
+             ignore kind of correct/trivial claim (△)
+             tital is sum of correct (✓) and incorrect (✗) claims
+
+- Open IE 5.0: see below
+- PredPatt: see below
+- ClausIE has obvious problems with CIT tokens
+- Ollie ...
+
+### overall
+
+(O=Open IE 5.0; P=PredPatt)
+
+   Recall Precision
+O:  3.5/5       3/4
+O:   6/11      7/13
+O:    1/6       1/2
+O:  1.5/8       2/6
+O:    3/9       3/8
+Σ   15/39     16/33
+      38%       48%
+
+P:    2/5       2/2
+P:   7/11       7/9
+P:    5/6       5/7
+P:  2.5/8       3/3
+P:  6.5/9       3/5
+Σ   23/39     20/26
+      59%       77%
+
+### side note
+-> juding claims concerning their *relevance* to the citation would require a more detailed look
+   in such a case, classification of integral vs non-integral citations would maybe be helpful
+   e.g.: non-integral: focus on all claims of the (sub) clause preceding the citations
+         integral: look at a depencency graph and figure out claims closely related to the citation
+
+
+##### 1 #####
+
+One main contribution in this paper is the introduction of a projection operator which achieves the same effect. In CIT we already discussed this operator which has recently also been addressed under the name “reduced stabilization” in CIT , CIT , CIT , MAINCIT . In these papers the construction of the corresponding operator is only possible in two dimensions using special integration rules.
+
+# by hand
+OP
+✓✓ [One main contribution] is [the introduction of a projection operator]
+✓  [projection operator] achieves [the same effect]
+✓✓ [we] discussed [this operator]
+△  [this operator] has recently been addressed [under the name “reduced stabilization”]
+   [construction of the corresponding operator] is only possible [in two dimensions using special integration rules]
+
+   Recall Precision
+O:  3.5/5       3/4
+P:    2/5       2/2
+
+# Open IE 5
+△0.73 (this operator; has also been addressed; T:recently)
+✗0.90 (two dimensions; using; special integration rules)
+✓0.93 Context(we discussed,List([120, 140))):(One main contribution in this paper; is; the introduction of a projection operator)
+✓0.65 (we; discussed; this operator which has recently also been addressed under the name; L:In CIT; T:already)
+△0.97 (the construction of the corresponding operator; is; only possible; L:In these papers)
+✓0.90 (a projection operator; achieves; the same effect)
+
+# PredPatt
+✓   ?a is the introduction of ?b
+        ?a: One main contribution in this paper
+        ?b: a projection operator
+△   ?a achieves ?b
+        ?a: which
+        ?b: the same effect. In CIT we already discussed this operator
+✓   ?a already discussed ?b
+        ?a: we
+        ?b: this operator
+△   ?a is only possible
+        ?a: the construction of the corresponding operator
+△   using ?a
+        ?a: special integration rules..
+
+# ClausIE
+|One main contribution in this paper| |is| |the introduction which achieves the same effect In CIT of a projection operator|
+|One main contribution in this paper| |is| |the introduction which achieves the same effect In CIT|
+|which| |achieves| |the same effect|
+|we| |discussed| |this operator CIT already|
+|we| |discussed| |this operator CIT|
+|this operator| |has been addressed| |under the name reduced stabilization recently|
+|this operator| |has been addressed| |under the name reduced stabilization also|
+|this operator| |has been addressed| |under the name reduced stabilization in CIT CIT|
+|this operator| |has been addressed| |under the name reduced stabilization|
+|CIT CIT| |is| |CIT|
+|CIT CIT| |is| |MAINCIT|
+|the construction of the corresponding operator| |is| |possible using special integration rules MAINCIT In these papers|
+|the construction of the corresponding operator| |is| |possible only using special integration rules MAINCIT|
+|the construction of the corresponding operator| |is| |possible in two dimensions using special integration rules MAINCIT|
+|the construction of the corresponding operator| |is| |possible using special integration rules MAINCIT|
+
+# Ollie
+0.924: (One main contribution; is the introduction of; a projection operator which achieves the same effect)
+0.843: (the construction of the corresponding operator; is only possible in; two dimensions using special integration rules)
+0.778: (the construction of the corresponding operator; is only; possible)
+0.767: (we; already discussed; this operator which has recently also been addressed under the name)
+0.736: (One main contribution; is; the introduction of a projection operator)
+0.693: (this operator which has recently also been addressed under the name; be already discussed in; these papers the construction of the corresponding operator is only possible in two dimensions)
+0.564: (the same effect; be achieves by; a projection operator)
+0.563: (we; already discussed this operator which has recently also been addressed under the name in; these papers the construction of the corresponding operator is only possible in two dimensions)
+0.524: (this operator which has recently also been addressed under the name; be already discussed in; CIT)
+0.441: (the introduction of a projection operator; be One main contribution in; this paper)
+0.4: (we; already discussed this operator which has recently also been addressed under the name in; CIT)
+0.399: (possible; be the construction of; the corresponding operator)
+0.187: (CIT; be stabilization in; CIT)
+
+
+##### 2 #####
+
+In this paper we use the HDG approach to construct a simple discretization of the Navier–Stokes equations in which the approximate velocity field is FORMULA -conforming and pointwise divergence-free. To achieve this, we first note that unlike many other HDG methods for incompressible flows CIT , CIT , CIT , CIT , CIT , CIT , MAINCIT , the HDG methods of CIT and CIT contain also facet unknowns for the pressure. The element pressure unknowns play the role of cell-wise Lagrange multiplier to enforce the continuity, whereas the facet pressure unknowns play the role of Lagrange multipliers enforcing continuity of the normal component of the velocity across cell boundaries.
+
+# by hand
+OP
+✓✓ [we] use [the HDG approach]
+△✓ [we] construct [a simple discretization of the Navier–Stokes equations]
+✓△ [the approximate velocity field] is [FORMULA -conforming]
+   [the approximate velocity field] is [pointwise divergence-free]
+△  [we] note [that ...]
+✓△ [the HDG methods of CIT and CIT] contain [facet unknowns for the pressure]
+ ✓ [many other HDG methods for incompressible flows CIT , CIT , CIT , CIT , CIT , CIT , MAINCIT] do not
+       contain [facet unknowns for the pressure]
+✓✓ [The element pressure unknowns] play [the role of cell-wise Lagrange multiplier to enforce the continuity]
+ ✓ [The element pressure unknowns/Lagrange multiplier] enforce [the continuity]
+△✓ [facet pressure unknowns] play [the role of Lagrange multipliers enforcing continuity of the normal component
+       of the velocity]
+   [facet pressure unknowns/Lagrange multiplier] enforce [continuity of the normal component of the velocity]
+
+   Recall Precision
+O:   6/11      7/13
+P:   7/11       7/9
+
+# Open IE 5
+✗0.81 Context(we note the HDG methods of CIT contain The element pressure unknowns play,List([108, 332))):(the HDG methods of CIT; contain facet; unknowns for the pressure)
+✓0.87 Context(we note The element pressure unknowns play,List([108, 332))):(the HDG methods of CIT; contain; also facet unknowns for the pressure)
+✓0.91 Context(we note,List([108, 121))):(The element pressure unknowns; play; the role of cell-wise Lagrange multiplier)
+✗0.13 Context(we use we note,List([14, 121))):(we; use the HDG approach To achieve; this)
+✗0.39 Context(we use we note,List([14, 121))):(we; use the HDG approach to construct; a simple pointwise divergence - free)
+✗0.58 Context(we note,List([108, 121))):(we; use; the HDG approach; to construct a simple pointwise divergence - free; L:In this paper)
+✗0.81 Context(we note the HDG methods of CIT contain The element pressure unknowns play,List([192, 416))):(the HDG methods of CIT; contain facet; unknowns for the pressure)
+✓0.87 Context(we note The element pressure unknowns play,List([192, 416))):(the HDG methods of CIT; contain; also facet unknowns for the pressure)
+△0.91 Context(we note,List([192, 205))):(The element pressure unknowns; play; the role of cell-wise Lagrange multiplier)
+✗0.13 Context(we use we note,List([14, 205))):(we; use the HDG approach To achieve; this)
+✓0.43 Context(we use we note,List([14, 205))):(we; use the HDG approach to construct; a simple discretization of the Navier - Stokes equations)
+✓0.69 Context(we note,List([192, 205))):(we; use; the HDG approach; to construct a simple discretization of the Navier - Stokes equations; L:In this paper)
+△0.40 (we; note; that unlike many other HDG methods for incompressible flows CIT , CIT , CIT , CIT , CIT , CIT , MAINCIT , the HDG methods of CIT contain also facet unknowns for the pressure . The element pressure unknowns play the role of cell-wise Lagrange multiplier; T:first)
+✓0.97 (the approximate velocity field; is; FORMULA - conforming; L:the Navier - Stokes equations)
+✓0.93 (the facet pressure unknowns; play; the role of Lagrange multipliers)
+△0.95 (Lagrange multipliers; enforcing; continuity of the normal component of the velocity across cell boundaries)
+
+# PredPatt
+✓✓  ?a use ?b to construct ?c
+        ?a: we
+        ?b: the HDG approach
+        ?c: a simple discretization of the Navier–Stokes equations in which the approximate velocity field is FORMULA -conforming and pointwise divergence-free.
+△  in ?a ?b is FORMULA -conforming
+        ?a: which
+        ?b: the approximate velocity field
+✗   ?a pointwise divergence-free.
+        ?a: the approximate velocity field
+△   ?a achieve ?b
+        ?a: we
+        ?b: this
+✗   In ?a , ?b first note ?c
+        ?a: this paper we use the HDG approach to construct a simple discretization of the Navier–Stokes equations in which the approximate velocity field is FORMULA -conforming and pointwise divergence-free. To achieve this
+        ?b: we
+        ?c: SOMETHING := unlike many other HDG methods for incompressible flows CIT , CIT , CIT , CIT , CIT , CIT , MAINCIT , the HDG methods of CIT and CIT contain also facet unknowns for the pressure. The element pressure unknowns play the role of cell-wise Lagrange multiplier to enforce the continuity , whereas the facet pressure unknowns play the role of Lagrange multipliers enforcing continuity of the normal component of the velocity across cell boundaries
+    unlike ?a , ?b contain also ?c
+✓✓      ?a: many other HDG methods for incompressible flows CIT , CIT , CIT , CIT , CIT , CIT , MAINCIT
+        ?b: the HDG methods of CIT and CIT
+        ?c: facet unknowns for the pressure. The element pressure unknowns play the role of cell-wise Lagrange multiplier to enforce the continuity
+✓   ?a play ?b
+        ?a: The element pressure unknowns
+        ?b: the role of cell-wise Lagrange multiplier
+✓   ?a enforce ?b
+        ?a: The element pressure unknowns
+        ?b: the continuity
+✓   ?a play ?b
+        ?a: the facet pressure unknowns
+        ?b: the role of Lagrange multipliers enforcing continuity of the normal component of the velocity across cell boundaries
+△   enforcing ?a
+        ?a: continuity of the normal component of the velocity across cell boundaries
+
+# ClausIE
+|we| |use| |the HDG approach to construct a simple discretization of the Navier Stokes equations this paper|
+|the HDG approach| |to construct| |a simple discretization of the Navier Stokes equations|
+|the approximate velocity field| |is| |FORMULA conforming divergence-free To achieve this in a simple discretization of the Navier Stokes equations|
+|the approximate velocity field| |is| |FORMULA pointwise divergence-free To achieve this in a simple discretization of the Navier Stokes equations|
+|the approximate velocity field| |is| |FORMULA conforming divergence-free To achieve this|
+|the approximate velocity field| |is| |FORMULA pointwise divergence-free To achieve this|
+|we| |note| |In this paper|
+|we| |note| |first|
+|we| |note|
+|facet unknowns for the pressure| |flows| |CIT MAINCIT unlike many other HDG methods for incompressible|
+|facet unknowns for the pressure| |flows| |CIT MAINCIT|
+|CIT MAINCIT| |is| |CIT|
+|CIT MAINCIT| |is| |CIT|
+|CIT MAINCIT| |is| |CIT|
+|CIT MAINCIT| |is| |CIT|
+|CIT MAINCIT| |is| |CIT|
+|the HDG methods of CIT| |contain| |also CIT MAINCIT|
+|the HDG methods of CIT| |contain| |also CIT MAINCIT|
+|the HDG methods of CIT| |contain| |CIT MAINCIT|
+|the HDG methods of CIT| |contain| |CIT MAINCIT|
+|The element pressure unknowns| |play| |the role of cell-wise Lagrange multiplier to enforce the continuity whereas the facet pressure unknowns play the role of Lagrange multipliers enforcing continuity of the normal component of the velocity across cell boundaries|
+|The element pressure unknowns| |play| |the role of cell-wise Lagrange multiplier to enforce the continuity|
+|the role of cell-wise Lagrange multiplier| |to enforce| |the continuity|
+|the facet pressure unknowns| |play| |the role of Lagrange multipliers enforcing continuity of the normal component of the velocity across cell boundaries|
+|Lagrange multipliers| |be enforcing| |continuity of the normal component of the velocity across cell boundaries|
+
+# Ollie
+0.756: (the role of cell-wise Lagrange; multiplier to enforce; the continuity)
+0.691: (we; use; the HDG approach)
+0.681: (the facet pressure unknowns; play; the role of Lagrange multipliers)
+0.649: (the approximate velocity field; is; FORMULA -conforming and pointwise divergence-free)
+0.447: (normal; be component of; the velocity)
+0.362: (normal; be component of the velocity across; cell boundaries)
+0.241: (we; use the HDG approach to construct a simple discretization of the Navier–Stokes equations in which the approximate velocity field is FORMULA -conforming and pointwise divergence-free in; this paper)
+
+
+##### 3 #####
+
+Their application to the incompressible Navier–Stokes problem has been considered in several works starting from the early 00's; a non exhaustive list of references includes CIT , CIT , CIT , CIT , CIT , CIT , CIT , CIT , CIT ; cf. also CIT for a pedagogical introduction. The Hybridizable discontinuous Galerkin (HDG) method of CIT , CIT has also been applied to the discretization of the incompressible Navier–Stokes equations in several recent works CIT , CIT , CIT , MAINCIT , CIT . Albeit this is not explicitly pointed out in all of the above references, also HDG methods often support general meshes as well as the possibility to increase the approximation order.
+
+# by hand
+OP
+ ✓ [Their application to the incompressible Navier–Stokes problem] has been considered [in several works]
+✓✓ [a non exhaustive list of references] includes [CIT , CIT , CIT , CIT , CIT , CIT , CIT , CIT , CIT]
+ ✓ [The Hybridizable discontinuous Galerkin (HDG) method of CIT , CIT] has been
+       applied [to the discretization of the incompressible Navier–Stokes equations in several recent works
+       CIT , CIT , CIT , MAINCIT , CIT .]
+ ✓ [this] is not explicitly pointed out
+ △ [HDG methods] support [general meshes]
+ △ [HDG methods] support [the possibility to increase the approximation order]
+
+   Recall Precision
+O:    1/6       1/2
+P:    5/6       5/7
+
+# Open IE 5
+△0.38 (this; is not explicitly pointed out; L:in all of the above references)
+✗0.88 (CIT; has been applied; to the discretization of the incompressible Navier-Stokes equations)
+✓0.95 (a non exhaustive list of references; includes; CIT , CIT , CIT , CIT , CIT , CIT , CIT , CIT , CIT)
+△0.90 (several works; starting; T:from the early 00's)
+
+# PredPatt
+✓   ?a has been considered in ?b
+        ?a: Their application to the incompressible Navier–Stokes problem
+        ?b: several works
+✓   ?a includes ?b
+        ?a: a non exhaustive list of references
+        ?b: CIT , CIT , CIT , CIT , CIT , CIT , CIT , CIT , CIT
+✗   ?a also CIT for ?b
+        ?a: cf.
+        ?b: a pedagogical introduction. The Hybridizable discontinuous Galerkin -LRB- HDG -RRB- method of CIT , CIT has also been applied to the discretization of the incompressible Navier–Stokes equations in several recent works this is not explicitly pointed out in all of the above references
+✓   ?a has also been applied to ?b
+        ?a: The Hybridizable discontinuous Galerkin -LRB- HDG -RRB- method of CIT , CIT
+        ?b: the discretization of the incompressible Navier–Stokes equations in several recent works this is not explicitly pointed out in all of the above references
+✓   ?a is not explicitly pointed out in ?b
+        ?a: this
+        ?b: all of the above references
+✓   also ?a often support ?b
+        ?a: HDG methods
+        ?b: general meshes as well as the possibility to increase the approximation order
+✗   increase ?a
+        ?a: the approximation order
+
+# ClausIE
+|Their| |has| |application to the incompressible Navier Stokes problem|
+|Their application to the incompressible Navier Stokes problem| |has been considered| |in several works CIT has also been applied to the discretization of the incompressible Navier Stokes equations in several recent works CIT MAINCIT also HDG methods often support general meshes to increase the approximation order|
+|Their application to the incompressible Navier Stokes problem| |has been considered| |in several works CIT has also been applied to the discretization of the incompressible Navier Stokes equations in several recent works CIT MAINCIT also HDG methods often support the possibility to increase the approximation order|
+|Their application to the incompressible Navier Stokes problem| |has been considered| |starting from the early 00 's CIT has also been applied to the discretization of the incompressible Navier Stokes equations in several recent works CIT MAINCIT also HDG methods often support general meshes to increase the approximation order|
+|Their application to the incompressible Navier Stokes problem| |has been considered| |starting from the early 00 's CIT has also been applied to the discretization of the incompressible Navier Stokes equations in several recent works CIT MAINCIT also HDG methods often support the possibility to increase the approximation order|
+|Their application to the incompressible Navier Stokes problem| |has been considered| |CIT has also been applied to the discretization of the incompressible Navier Stokes equations in several recent works CIT MAINCIT also HDG methods often support general meshes to increase the approximation order|
+|Their application to the incompressible Navier Stokes problem| |has been considered| |CIT has also been applied to the discretization of the incompressible Navier Stokes equations in several recent works CIT MAINCIT also HDG methods often support the possibility to increase the approximation order|
+|a non exhaustive list of references| |includes| |CIT CIT cf. also CIT for a pedagogical introduction The Hybridizable discontinuous Galerkin HDG method of CIT|
+|CIT CIT cf. also CIT for a pedagogical introduction The Hybridizable discontinuous Galerkin HDG method of CIT| |is| |CIT|
+|CIT CIT cf. also CIT for a pedagogical introduction The Hybridizable discontinuous Galerkin HDG method of CIT| |is| |CIT|
+|CIT CIT cf. also CIT for a pedagogical introduction The Hybridizable discontinuous Galerkin HDG method of CIT| |is| |CIT|
+|CIT CIT cf. also CIT for a pedagogical introduction The Hybridizable discontinuous Galerkin HDG method of CIT| |is| |CIT|
+|CIT CIT cf. also CIT for a pedagogical introduction The Hybridizable discontinuous Galerkin HDG method of CIT| |is| |CIT|
+|CIT CIT cf. also CIT for a pedagogical introduction The Hybridizable discontinuous Galerkin HDG method of CIT| |is| |CIT|
+|CIT CIT cf. also CIT for a pedagogical introduction The Hybridizable discontinuous Galerkin HDG method of CIT| |is| |CIT|
+|cf. The Hybridizable discontinuous Galerkin HDG method of CIT| |be CIT| |also for a pedagogical introduction|
+|cf. The Hybridizable discontinuous Galerkin HDG method of CIT| |be CIT| |also|
+|CIT| |has been applied| |CIT MAINCIT also|
+|CIT| |has been applied| |to the discretization of the incompressible Navier Stokes equations in several recent works CIT MAINCIT|
+|CIT| |has been applied| |CIT MAINCIT|
+|CIT MAINCIT| |is| |CIT|
+|CIT MAINCIT| |is| |CIT|
+|CIT MAINCIT| |is| |CIT Albeit|
+|this| |is not pointed out| |CIT Albeit explicitly|
+|this| |is not pointed out| |in all of the above references CIT Albeit|
+|this| |is not pointed out| |CIT Albeit|
+|HDG methods| |support| |general meshes to increase the approximation order also|
+|HDG methods| |support| |the possibility to increase the approximation order also|
+|HDG methods| |support| |general meshes to increase the approximation order often|
+|HDG methods| |support| |the possibility to increase the approximation order often|
+|HDG methods| |support| |general meshes to increase the approximation order|
+|HDG methods| |support| |the possibility to increase the approximation order|
+
+# Ollie
+0.952: (Their application; has been considered in; several works starting from the early 00's)
+0.759: (( HDG) method of CIT; has also been applied to; the discretization of the incompressible Navier–Stokes equations)
+0.735: (( HDG) method of CIT; has also been applied in; several recent works CIT , CIT , CIT , MAINCIT , CIT . Albeit this is not explicitly pointed out in all of the above references , also HDG methods often support general meshes as well as the possibility)
+0.606: (the above references; often support; general meshes)
+0.571: (several works; starting from; the early 00's)
+0.126: (cf; be a non exhaustive list of; references)
+
+
+##### 4 #####
+
+When polynomials of degree FORMULA are used, we show that both the energy-norm of the velocity and the FORMULA -norm of the pressure converge as FORMULA (FORMULA denotes here the meshsize). These convergence rates are similar to the ones recently derived in MAINCIT for a HDG method with pressure and velocity spaces chosen as in CIT , CIT . A major difference with respect to CIT is that we obtain them here using polynomials FORMULA instead of FORMULA inside mesh elements (this is precisely one of the major outcomes of the HHO technology identified in CIT ).
+
+# by hand
+OP
+   [we] show [that ...]
+△  [the energy-norm of the velocity] converges
+   [the FORMULA -norm of the pressure] converges
+✓  [FORMULA] denotes [the meshsize]
+ ✓ [These convergence rates] are similar to [the ones recently derived in MAINCIT for a HDG method with
+       pressure and velocity spaces chosen as in CIT , CIT .]
+ ✓ [A major difference with respect to CIT] is [that ...]
+ △ [we] obtain [them here using polynomials FORMULA instead of FORMULA inside mesh elements]
+   [this] is [precisely one of the major outcomes of the HHO technology identified in CIT]
+
+   Recall Precision
+O:  1.5/8       2/6
+P:  2.5/8       3/3
+
+# Open IE 5
+✗0.93 Context(we show,List([46, 53))):(both the energy - norm of the FORMULA - norm of the pressure; converge; as FORMULA)
+✗0.51 (we; show; that both the energy - norm of the FORMULA - norm of the pressure converge as FORMULA; T:When polynomials of degree FORMULA are used)
+✗0.93 Context(we show,List([46, 53))):(both the energy - norm of the FORMULA - norm of the pressure; converge; as FORMULA ( FORMULA denotes here the meshsize)
+✗0.51 (we; show; that both the energy - norm of the FORMULA - norm of the pressure converge as FORMULA ( FORMULA denotes here the meshsize; T:When polynomials of degree FORMULA are used)
+△0.91 (These convergence rates; are; similar to the ones)
+✓0.81 (FORMULA; denotes; L:here; the meshsize)
+△0.92 (velocity spaces; chosen; as in CIT)
+△0.93 Context(we show,List([46, 53))):(both the energy - norm of the velocity; converge; as FORMULA)
+△0.47 (we; show; that both the energy - norm of the velocity converge as FORMULA ( FORMULA denotes here the meshsize ); T:When polynomials of degree FORMULA are used)
+✓0.79 (FORMULA; denotes; L:here; T:the meshsize)
+△0.89 Context(we show,List([46, 53))):(These convergence rates; are; similar to the ones)
+0.93 Context(we show,List([46, 53))):(both the energy - norm of the velocity; converge; as FORMULA ( FORMULA denotes here the meshsize)
+0.47 (we; show; that both the energy - norm of the velocity converge as FORMULA ( FORMULA denotes here the meshsize; T:When polynomials of degree FORMULA are used)
+0.94 (the ones; derived; in MAINCIT; T:recently)
+0.63 (polynomials of degree FORMULA; are used; )
+
+# PredPatt
+△   When ?a are used
+        ?a: polynomials of degree FORMULA
+△   ?a show ?b ?c
+        ?a: we
+        ?b: SOMETHING := These convergence rates are similar to the ones recently derived in MAINCIT for a HDG method with pressure and velocity spaces chosen as in CIT , CIT
+        ?c: SOMETHING := A major difference with respect to CIT is that we obtain them here using polynomials FORMULA instead of FORMULA inside mesh elements
+✓   ?a are similar to ?b
+        ?a: These convergence rates
+        ?b: the ones recently derived in MAINCIT for a HDG method with pressure and velocity spaces chosen as in CIT , CIT
+✓   ?a is ?b
+        ?a: A major difference with respect to CIT
+        ?b: SOMETHING := we obtain them here using polynomials FORMULA instead of FORMULA inside mesh elements
+✓   ?a obtain ?b here using ?c ?d
+        ?a: we
+        ?b: them
+        ?c: polynomials
+        ?d: FORMULA
+
+# ClausIE
+|polynomials of degree FORMULA| |are used| |When|
+|polynomials of degree FORMULA| |are used|
+|we| |show| |that the energy-norm of the velocity When polynomials of degree FORMULA are used|
+|we| |show| |that the FORMULA norm of the pressure converge as FORMULA FORMULA denotes here the meshsize When polynomials of degree FORMULA are used|
+|we| |show| |that These convergence When polynomials of degree FORMULA are used|
+|we| |show| |that A major difference with respect to CIT this is precisely one of the major outcomes of the HHO technology identified in CIT When polynomials of degree FORMULA are used|
+|we| |show| |that the energy-norm of the velocity|
+|we| |show| |that the FORMULA norm of the pressure converge as FORMULA FORMULA denotes here the meshsize|
+|we| |show| |that These convergence|
+|we| |show| |that A major difference with respect to CIT this is precisely one of the major outcomes of the HHO technology identified in CIT|
+|FORMULA| |denotes| |here the meshsize|
+|FORMULA| |denotes| |the meshsize|
+|rates| |are| |similar to the ones recently derived in MAINCIT for a HDG method with pressure spaces chosen as in CIT CIT These convergence|
+|rates| |are| |similar to the ones recently derived in MAINCIT for a HDG method with velocity spaces chosen as in CIT CIT These convergence|
+|rates| |are| |similar These convergence|
+|the ones| |be derived| |recently in MAINCIT for a HDG method|
+|the ones| |be derived| |recently with pressure spaces chosen as in CIT CIT|
+|the ones| |be derived| |recently with velocity spaces chosen as in CIT CIT|
+|the ones| |be derived| |recently|
+|pressure spaces| |be chosen| |as in CIT CIT|
+|velocity spaces| |be chosen| |as in CIT CIT|
+|we| |obtain| |them here using polynomials FORMULA instead of FORMULA inside mesh elements|
+|them| |using| |polynomials FORMULA instead of FORMULA inside mesh elements here|
+|them| |using| |polynomials FORMULA instead of FORMULA inside mesh elements|
+|this| |is| |one precisely|
+|this| |is| |one of the major outcomes of the HHO technology identified in CIT|
+|this| |is| |one|
+|the HHO technology| |be identified| |in CIT|
+
+# Ollie
+0.787: (These convergence rates; are similar to; the ones)
+0.616: (the HHO technology; be identified in; CIT)
+0.615: (pressure and velocity spaces; be chosen in; CIT)
+0.527: (polynomials FORMULA; be using instead of; FORMULA)
+0.517: (we; obtain them here using polynomials FORMULA instead of; FORMULA)
+0.423: (polynomials FORMULA; be using inside; mesh elements)
+0.417: (we; obtain; them)
+0.356: (we; obtain them here using; polynomials FORMULA)
+0.339: (we; obtain them here using polynomials FORMULA inside; mesh elements)
+
+
+##### 5 #####
+
+These convergence rates are similar to the ones recently derived in CIT for a HDG method with pressure and velocity spaces chosen as in CIT , CIT . A major difference with respect to MAINCIT is that we obtain them here using polynomials FORMULA instead of FORMULA inside mesh elements (this is precisely one of the major outcomes of the HHO technology identified in CIT ). Another difference with respect to CIT , CIT is that our trilinear form is expressed in terms of a discrete gradient reconstruction and designed so that it does not contribute to the kinetic energy balance, a feature which simplifies several arguments in the analysis; cf. Remark REF for further details.
+
+# by hand
+OP
+ ✓ [These convergence rates] are similar to [the ones recently derived in MAINCIT for a HDG method
+       with pressure and velocity spaces chosen as in CIT , CIT .]
+ ✓ [A major difference with respect to CIT] is [that ...]
+ △ [we] obtain [them here using polynomials FORMULA instead of FORMULA inside mesh elements]
+✓  [this] is [precisely one of the major outcomes of the HHO technology identified in CIT]
+ ✓ [Another difference with respect to CIT , CIT] is [that ...]
+ ✓ [our trilinear form] is [expressed in terms of a discrete gradient reconstruction]
+   [our trilinear form] is [designed so that ...]
+✓✓ [it] does not contribute to [the kinetic energy balance]
+✓✓ [a feature] simplifies [several arguments in the analysis]
+
+   Recall Precision
+O:    3/9       3/8
+P:  6.5/9       3/5
+
+# Open IE 5
+△0.31 Context(CIT is,List([403, 409))):(our trilinear form; is expressed; )
+△0.92 (velocity spaces; chosen; as in CIT)
+✓0.45 (it; does not contribute; to the kinetic energy balance)
+✗0.69 (CIT; is designed; so that it does not contribute to the kinetic energy balance , a feature which simplifies several arguments in the analysis ; cf . Remark REF for further details)
+△0.29 Context(These convergence rates are similar to the ones is we obtain,List([0, 120))):(we; obtain them using; polynomials)
+△0.26 Context(These convergence rates are similar to the ones is,List([0, 105))):(we; obtain; them; L:here)
+✗0.85 (These convergence rates are similar to the ones; is; that we obtain them here using polynomials FORMULA instead of FORMULA inside mesh elements ( this is precisely one of the major outcomes of the HHO technology identified in CIT ) . Another difference with respect to CIT)
+✓0.89 (a feature; simplifies; several arguments in the analysis)
+△0.31 Context(CIT is,List([328, 334))):(our trilinear form; is expressed; )
+△0.26 Context(These convergence rates are similar to the ones is CIT is,List([0, 334))):(we; obtain; them; L:here)
+✗0.85 Context(CIT is,List([328, 334))):(These convergence rates are similar to the ones; is; that we obtain them here using polynomials FORMULA instead of FORMULA inside mesh elements ( this is precisely one of the major outcomes of the HHO technology identified in CIT ) . Another difference with respect to CIT)
+✗0.67 (CIT; is; that our trilinear form is expressed in terms of a discrete gradient reconstruction)
+✗0.94 (the HHO technology; identified; L:in CIT)
+△0.94 (the ones; derived; in CIT; T:recently)
+✓0.43 (this; is precisely; one of the major outcomes of the HHO technology)
+△0.91 (These convergence rates; are; similar to the ones)
+
+# PredPatt
+✓   ?a are similar to ?b
+        ?a: These convergence rates
+        ?b: the ones recently derived in CIT for a HDG method with pressure and velocity spaces
+△   ?a obtain ?b here using ?c ?d
+        ?a: we
+        ?b: them
+        ?c: polynomials
+        ?d: FORMULA
+✓   ?a is ?b
+        ?a: Another difference with respect to CIT , CIT
+        ?b: SOMETHING := our trilinear form is expressed in terms of a discrete gradient reconstruction
+✓   ?a is expressed in ?b
+        ?a: our trilinear form
+        ?b: terms of a discrete gradient reconstruction
+✗   that ?a does not contribute to ?b
+        ?a: it
+        ?b: the kinetic energy balance , a feature which simplifies several arguments in the analysis
+△   ?a simplifies ?b in ?c
+        ?a: which
+        ?b: several arguments
+        ?c: the analysis
+✗   ?a cf. ?b for ?c
+        ?a: These convergence rates
+        ?b: Remark REF
+        ?c: further details
+
+# ClausIE
+|These convergence rates| |are| |similar to the ones recently derived in CIT for a HDG method with pressure spaces chosen as in CIT|
+|These convergence rates| |are| |similar to the ones recently derived in CIT for a HDG method with velocity spaces chosen as in CIT|
+|These convergence rates| |are| |similar|
+|the ones| |be derived| |recently in CIT for a HDG method|
+|the ones| |be derived| |recently with pressure spaces chosen as in CIT|
+|the ones| |be derived| |recently with velocity spaces chosen as in CIT|
+|the ones| |be derived| |recently|
+|pressure spaces| |be chosen| |as in CIT|
+|velocity spaces| |be chosen| |as in CIT|
+|CIT| |is| |CIT this is precisely one of the major outcomes of the HHO technology identified in CIT Another difference with respect to CIT|
+|A major difference with respect to MAINCIT| |is| |that we obtain them here using polynomials FORMULA instead of FORMULA inside mesh elements CIT this is precisely one of the major outcomes of the HHO technology identified in CIT Another difference with respect to CIT|
+|we| |obtain| |them here using polynomials FORMULA instead of FORMULA inside mesh elements|
+|them| |using| |polynomials FORMULA instead of FORMULA inside mesh elements here|
+|them| |using| |polynomials FORMULA instead of FORMULA inside mesh elements|
+|this| |is| |one precisely|
+|this| |is| |one of the major outcomes of the HHO technology identified in CIT|
+|this| |is| |one|
+|the HHO technology| |be identified| |in CIT|
+|CIT| |is| |These convergence rates are similar to the ones recently derived in CIT for a HDG method with pressure spaces chosen as in CIT that our trilinear form is expressed in terms of a discrete gradient reconstruction|
+|CIT| |is| |These convergence rates are similar to the ones recently derived in CIT for a HDG method with pressure spaces chosen as in CIT that our trilinear form is designed so that it does not contribute to the kinetic energy balance|
+|CIT| |is| |These convergence rates are similar to the ones recently derived in CIT for a HDG method with velocity spaces chosen as in CIT that our trilinear form is expressed in terms of a discrete gradient reconstruction|
+|CIT| |is| |These convergence rates are similar to the ones recently derived in CIT for a HDG method with velocity spaces chosen as in CIT that our trilinear form is designed so that it does not contribute to the kinetic energy balance|
+|our| |has| |trilinear form|
+|our trilinear form| |is expressed| |in terms of a discrete gradient reconstruction|
+|our trilinear form| |is designed| |so that it does not contribute to the kinetic energy balance|
+|it| |does not contribute| |to the kinetic energy balance|
+|the kinetic energy balance| |is| |a feature cf. Remark REF for further details|
+|a feature cf. Remark REF for further details| |simplifies| |several arguments in the analysis|
+
+# Ollie
+0.797: (These convergence rates; are similar to; the ones)
+0.782: (a feature; simplifies several arguments in; the analysis)
+0.629: (our trilinear form; is expressed; a feature which simplifies several arguments in the analysis)
+0.616: (the HHO technology; be identified in; CIT)
+0.615: (pressure and velocity spaces; be chosen in; CIT)
+0.611: (REF; be Remark for; further details)
+0.576: (our trilinear form; is expressed a feature which simplifies several arguments in the analysis ; cf . Remark REF for further details in; terms of a discrete gradient reconstruction)
+0.564: (several arguments; be simplifies by; a feature)
+0.527: (polynomials FORMULA; be using instead of; FORMULA)
+0.517: (we; obtain them here using polynomials FORMULA instead of; FORMULA)
+0.454: (it; so does not contribute to; the kinetic energy balance)
+0.423: (polynomials FORMULA; be using inside; mesh elements)
+0.417: (we; obtain; them)
+0.356: (we; obtain them here using; polynomials FORMULA)
+0.339: (we; obtain them here using polynomials FORMULA inside; mesh elements)

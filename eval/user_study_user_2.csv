@@ -1,0 +1,100 @@
+1555146763␟d4062c8c␟0␟{"cit_type": "claim", "bow1": "on", "bow2": "on", "bow3": "on", "pp1": "on", "pp2": "on", "pp4": "on"}
+1555146837␟d4062c8c␟1␟{"cit_type": "ne"}
+1555147031␟d4062c8c␟2␟{"author_name": "on", "cit_type": "other", "bow1": "on", "pp1": "on"}
+1555147127␟d4062c8c␟3␟{"author_name": "on", "cit_type": "other", "bow1": "on", "bow2": "on", "pp1": "on", "pp2": "on"}
+1555147280␟d4062c8c␟4␟{"cit_type": "claim", "bow1": "on", "bow2": "on", "pp1": "on", "pp2": "on", "pp4": "on"}
+1555147551␟d4062c8c␟5␟{"cit_type": "claim", "bow2": "on", "bow5": "on", "pp2": "on", "pp5": "on"}
+1555147625␟d4062c8c␟6␟{"cit_type": "ne"}
+1555147680␟d4062c8c␟7␟{"cit_type": "ne"}
+1555147860␟d4062c8c␟8␟{"cit_type": "ne"}
+1555147984␟d4062c8c␟9␟{"cit_type": "claim", "bow4": "on", "bow5": "on", "pp4": "on", "pp5": "on"}
+1555148051␟d4062c8c␟10␟{"cit_type": "claim", "bow1": "on", "pp1": "on", "pp5": "on"}
+1555148196␟d4062c8c␟11␟{"cit_type": "ne", "bow1": "on", "pp1": "on"}
+1555148253␟d4062c8c␟12␟{"cit_type": "ne"}
+1555148338␟d4062c8c␟13␟{"cit_type": "ne", "bow1": "on", "bow4": "on", "bow5": "on", "pp1": "on", "pp4": "on", "pp5": "on", "np1": "on", "np3": "on"}
+1555148468␟d4062c8c␟14␟{"cit_type": "example"}
+1555148704␟d4062c8c␟15␟{"cit_type": "claim", "bow1": "on", "pp2": "on"}
+1555148745␟d4062c8c␟16␟"undecidable"
+1555149011␟d4062c8c␟17␟{"cit_type": "ne"}
+1555149267␟d4062c8c␟18␟{"cit_type": "ne"}
+1555150245␟d4062c8c␟19␟{"cit_type": "ne", "bow1": "on", "bow3": "on", "pp1": "on", "pp2": "on", "np1": "on", "np2": "on", "np5": "on"}
+1555659519␟d4062c8c␟20␟{"cit_type": "example", "bow1": "on", "pp1": "on", "pp5": "on"}
+1555659704␟d4062c8c␟21␟{"cit_type": "ne"}
+1555659825␟d4062c8c␟22␟{"cit_type": "example"}
+1555660031␟d4062c8c␟23␟{"cit_type": "example", "bow4": "on", "pp5": "on"}
+1555660178␟d4062c8c␟24␟{"cit_type": "example"}
+1555660520␟d4062c8c␟25␟{"cit_type": "example"}
+1555660662␟d4062c8c␟26␟{"cit_type": "ne", "bow1": "on", "bow4": "on", "bow5": "on", "pp1": "on", "pp4": "on", "pp5": "on", "np1": "on", "np5": "on"}
+1555660715␟d4062c8c␟27␟{"cit_type": "ne", "bow1": "on", "pp1": "on"}
+1555660885␟d4062c8c␟28␟{"cit_type": "claim", "bow1": "on", "pp2": "on"}
+1555661005␟d4062c8c␟29␟{"cit_type": "claim"}
+1555661019␟d4062c8c␟30␟"undecidable"
+1555661061␟d4062c8c␟31␟{"cit_type": "ne", "bow1": "on", "pp1": "on"}
+1555661109␟d4062c8c␟32␟"undecidable"
+1555661217␟d4062c8c␟33␟{"author_name": "on", "cit_type": "example", "bow1": "on", "pp1": "on"}
+1555661410␟d4062c8c␟34␟{"cit_type": "example"}
+1555661420␟d4062c8c␟35␟"undecidable"
+1555661665␟d4062c8c␟36␟{"syntactical": "on", "cit_type": "other"}
+1555661786␟d4062c8c␟37␟{"author_name": "on", "cit_type": "other", "np1": "on"}
+1555661984␟d4062c8c␟38␟{"cit_type": "example", "bow1": "on", "bow3": "on", "pp1": "on", "pp4": "on", "np1": "on", "np2": "on", "np3": "on", "np4": "on", "np5": "on"}
+1555662045␟d4062c8c␟39␟{"cit_type": "ne", "bow2": "on", "bow4": "on", "pp2": "on", "pp4": "on"}
+1555662266␟d4062c8c␟40␟{"cit_type": "ne"}
+1555662432␟d4062c8c␟41␟{"cit_type": "example"}
+1555662536␟d4062c8c␟42␟{"cit_type": "example", "bow1": "on", "pp1": "on"}
+1555662548␟d4062c8c␟43␟"undecidable"
+1555662711␟d4062c8c␟44␟{"cit_type": "claim", "bow1": "on", "bow2": "on", "bow4": "on", "bow5": "on", "pp1": "on", "pp3": "on", "pp4": "on", "pp5": "on"}
+1555662820␟d4062c8c␟45␟{"cit_type": "claim"}
+1555662844␟d4062c8c␟46␟"undecidable"
+1555662892␟d4062c8c␟47␟{"cit_type": "ne"}
+1555662958␟d4062c8c␟48␟{"cit_type": "example", "bow2": "on", "pp2": "on"}
+1555663203␟d4062c8c␟49␟{"cit_type": "example", "bow3": "on", "pp3": "on"}
+1555663292␟d4062c8c␟50␟{"cit_type": "ne", "bow1": "on", "bow3": "on", "pp1": "on", "pp3": "on", "pp5": "on"}
+1555663328␟d4062c8c␟51␟{"cit_type": "ne"}
+1555663676␟d4062c8c␟52␟{"cit_type": "claim", "bow1": "on", "bow2": "on", "pp1": "on", "pp2": "on"}
+1555664070␟d4062c8c␟53␟{"cit_type": "claim", "bow5": "on", "pp5": "on"}
+1555664313␟d4062c8c␟54␟{"cit_type": "claim", "bow5": "on", "pp5": "on", "np3": "on"}
+1555664348␟d4062c8c␟55␟{"cit_type": "claim", "bow2": "on", "bow3": "on", "pp2": "on", "pp3": "on"}
+1555664401␟d4062c8c␟56␟{"cit_type": "example"}
+1555664677␟d4062c8c␟57␟{"cit_type": "claim", "bow1": "on", "bow2": "on", "bow5": "on", "pp1": "on", "pp2": "on", "pp4": "on", "pp5": "on"}
+1555664773␟d4062c8c␟58␟{"syntactical": "on", "cit_type": "other"}
+1555664882␟d4062c8c␟59␟{"syntactical": "on", "cit_type": "other"}
+1555665001␟d4062c8c␟60␟{"cit_type": "ne", "bow1": "on", "pp1": "on", "np1": "on", "np2": "on"}
+1555665058␟d4062c8c␟61␟{"cit_type": "example", "bow1": "on", "bow2": "on", "bow3": "on", "bow4": "on", "bow5": "on", "pp1": "on", "pp2": "on", "pp3": "on", "pp4": "on", "pp5": "on"}
+1555665167␟d4062c8c␟62␟{"cit_type": "example"}
+1555665261␟d4062c8c␟63␟{"cit_type": "claim", "bow1": "on", "bow5": "on", "pp1": "on", "pp3": "on"}
+1555665469␟d4062c8c␟64␟{"cit_type": "claim"}
+1555665535␟d4062c8c␟65␟{"cit_type": "ne", "bow1": "on", "pp1": "on", "np1": "on"}
+1555665574␟d4062c8c␟66␟{"cit_type": "example", "bow1": "on", "pp1": "on"}
+1555665677␟d4062c8c␟67␟{"cit_type": "example"}
+1555665862␟d4062c8c␟68␟{"cit_type": "ne", "bow2": "on", "bow5": "on", "pp2": "on", "pp5": "on"}
+1555665994␟d4062c8c␟69␟{"cit_type": "ne", "np2": "on"}
+1555666246␟d4062c8c␟70␟{"cit_type": "ne", "bow1": "on", "bow4": "on", "pp2": "on"}
+1555666343␟d4062c8c␟71␟{"cit_type": "ne", "bow1": "on", "pp1": "on"}
+1555674248␟d4062c8c␟72␟{"cit_type": "claim"}
+1555674416␟d4062c8c␟73␟{"cit_type": "example"}
+1555674687␟d4062c8c␟74␟{"cit_type": "ne"}
+1555674797␟d4062c8c␟75␟{"cit_type": "ne"}
+1555674815␟d4062c8c␟76␟"undecidable"
+1555674912␟d4062c8c␟77␟"broken"
+1555674979␟d4062c8c␟78␟"undecidable"
+1555675035␟d4062c8c␟79␟{"cit_type": "example", "bow1": "on", "bow5": "on", "pp1": "on"}
+1555675088␟d4062c8c␟80␟{"author_name": "on", "cit_type": "other"}
+1555675264␟d4062c8c␟81␟{"author_name": "on", "cit_type": "other", "np1": "on", "np3": "on"}
+1555675372␟d4062c8c␟82␟{"cit_type": "claim", "bow2": "on", "pp2": "on", "pp5": "on"}
+1555675422␟d4062c8c␟83␟{"cit_type": "ne", "bow2": "on", "bow4": "on", "pp2": "on", "pp4": "on", "np1": "on", "np2": "on"}
+1555675940␟d4062c8c␟84␟{"syntactical": "on", "cit_type": "claim"}
+1555676021␟d4062c8c␟85␟{"syntactical": "on", "cit_type": "other", "bow3": "on", "pp3": "on"}
+1555676275␟d4062c8c␟86␟{"cit_type": "other", "bow1": "on", "pp2": "on"}
+1555676777␟d4062c8c␟87␟{"cit_type": "other", "bow2": "on", "pp2": "on", "pp3": "on"}
+1555676872␟d4062c8c␟88␟{"cit_type": "claim"}
+1555676902␟d4062c8c␟89␟"undecidable"
+1555676983␟d4062c8c␟90␟{"cit_type": "example", "bow1": "on", "bow3": "on", "pp1": "on", "pp4": "on", "np1": "on", "np2": "on", "np3": "on", "np4": "on", "np5": "on"}
+1555677117␟d4062c8c␟91␟"undecidable"
+1555677152␟d4062c8c␟92␟"undecidable"
+1555677407␟d4062c8c␟93␟"pass"
+1555677481␟d4062c8c␟94␟{"cit_type": "example", "bow1": "on", "pp1": "on"}
+1555677559␟d4062c8c␟95␟{"cit_type": "example", "bow1": "on", "bow2": "on", "pp1": "on", "pp2": "on"}
+1555677643␟d4062c8c␟96␟{"author_name": "on", "cit_type": "other", "bow2": "on", "pp4": "on"}
+1555677697␟d4062c8c␟97␟{"cit_type": "example", "bow1": "on", "pp1": "on"}
+1555677715␟d4062c8c␟98␟"undecidable"
+1555677777␟d4062c8c␟99␟{"cit_type": "example", "bow1": "on", "pp1": "on"}

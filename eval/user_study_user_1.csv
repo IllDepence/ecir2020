@@ -1,0 +1,62 @@
+1555835845␟bbd51eea␟0␟{"cit_type": "claim", "bow1": "on", "bow2": "on", "pp1": "on", "pp2": "on"}
+1555835929␟bbd51eea␟1␟{"cit_type": "ne"}
+1555836252␟bbd51eea␟2␟{"author_name": "on", "cit_type": "claim", "np1": "on"}
+1555836485␟bbd51eea␟3␟{"author_name": "on", "cit_type": "claim", "bow1": "on", "bow4": "on", "pp1": "on", "pp4": "on"}
+1555836569␟bbd51eea␟4␟{"cit_type": "claim", "bow1": "on", "pp1": "on"}
+1555837029␟bbd51eea␟5␟{"cit_type": "example"}
+1555837162␟bbd51eea␟6␟{"cit_type": "ne"}
+1555837191␟bbd51eea␟7␟"undecidable"
+1555838139␟bbd51eea␟8␟{"cit_type": "claim"}
+1555838373␟bbd51eea␟9␟{"cit_type": "claim"}
+1555838488␟bbd51eea␟10␟{"cit_type": "claim", "bow1": "on", "pp1": "on", "pp5": "on"}
+1555841368␟bbd51eea␟11␟{"cit_type": "ne", "bow3": "on", "pp3": "on", "np1": "on"}
+1555841527␟bbd51eea␟12␟{"cit_type": "ne"}
+1555841749␟bbd51eea␟13␟{"cit_type": "ne", "bow1": "on", "bow4": "on", "pp1": "on", "pp5": "on", "np1": "on", "np3": "on"}
+1555842463␟bbd51eea␟14␟"undecidable"
+1555842565␟bbd51eea␟15␟{"cit_type": "claim"}
+1555842725␟bbd51eea␟16␟{"cit_type": "example", "bow2": "on", "pp3": "on", "pp4": "on"}
+1555843200␟bbd51eea␟17␟{"cit_type": "ne"}
+1555843697␟bbd51eea␟18␟{"cit_type": "ne"}
+1555926887␟bbd51eea␟19␟{"cit_type": "ne", "bow1": "on", "bow3": "on", "pp1": "on", "pp2": "on", "np1": "on", "np2": "on", "np5": "on"}
+1555927121␟bbd51eea␟20␟{"cit_type": "example", "bow1": "on", "pp1": "on", "pp5": "on"}
+1555927344␟bbd51eea␟21␟{"cit_type": "ne", "bow3": "on", "pp3": "on"}
+1555931652␟bbd51eea␟22␟{"cit_type": "example", "bow1": "on", "bow3": "on", "bow5": "on", "pp1": "on", "pp2": "on", "pp5": "on"}
+1555931779␟bbd51eea␟23␟{"cit_type": "claim"}
+1555932389␟bbd51eea␟24␟{"cit_type": "claim"}
+1555932519␟bbd51eea␟25␟{"cit_type": "ne"}
+1555932755␟bbd51eea␟26␟{"cit_type": "example", "bow1": "on", "bow4": "on", "bow5": "on", "pp1": "on", "pp4": "on", "pp5": "on", "np1": "on"}
+1555932913␟bbd51eea␟27␟{"cit_type": "ne", "bow1": "on", "bow2": "on", "bow3": "on", "pp1": "on", "pp2": "on", "pp3": "on"}
+1555933250␟bbd51eea␟28␟{"cit_type": "claim", "bow1": "on", "bow3": "on", "pp1": "on", "pp2": "on"}
+1556220935␟bbd51eea␟29␟"pass"
+1556220974␟bbd51eea␟30␟"undecidable"
+1556221065␟bbd51eea␟31␟{"cit_type": "ne", "bow1": "on", "pp1": "on"}
+1556221244␟bbd51eea␟32␟"pass"
+1556221377␟bbd51eea␟33␟{"author_name": "on", "cit_type": "other", "bow1": "on", "pp1": "on"}
+1556221858␟bbd51eea␟34␟{"cit_type": "example", "bow2": "on", "pp4": "on", "np1": "on"}
+1556221870␟bbd51eea␟35␟"undecidable"
+1556222364␟bbd51eea␟36␟{"syntactical": "on", "cit_type": "other"}
+1556222745␟bbd51eea␟37␟{"author_name": "on", "cit_type": "other", "np1": "on", "np3": "on", "np4": "on"}
+1556223041␟bbd51eea␟38␟{"cit_type": "example", "bow1": "on", "bow3": "on", "pp1": "on", "pp4": "on", "np1": "on", "np2": "on", "np3": "on", "np4": "on", "np5": "on"}
+1556223168␟bbd51eea␟39␟{"cit_type": "ne"}
+1556267891␟bbd51eea␟40␟{"cit_type": "example"}
+1556267951␟bbd51eea␟41␟{"cit_type": "example"}
+1556271288␟bbd51eea␟42␟{"cit_type": "example", "bow1": "on", "bow2": "on", "bow3": "on", "bow4": "on", "pp1": "on", "pp2": "on", "pp4": "on"}
+1556271796␟bbd51eea␟43␟{"cit_type": "ne", "bow1": "on", "pp1": "on"}
+1556278514␟bbd51eea␟44␟{"cit_type": "claim", "bow1": "on", "bow2": "on", "bow3": "on", "bow4": "on", "bow5": "on", "pp1": "on", "pp2": "on", "pp3": "on", "pp4": "on", "pp5": "on"}
+1556278726␟bbd51eea␟45␟{"cit_type": "claim"}
+1556278787␟bbd51eea␟46␟"undecidable"
+1556278957␟bbd51eea␟47␟{"cit_type": "ne"}
+1556295486␟bbd51eea␟48␟{"cit_type": "example", "bow2": "on", "pp2": "on"}
+1556295868␟bbd51eea␟49␟{"cit_type": "example"}
+1556296049␟bbd51eea␟50␟{"cit_type": "ne", "bow1": "on", "bow2": "on", "bow3": "on", "pp1": "on", "pp2": "on", "pp3": "on"}
+1556296089␟bbd51eea␟51␟"undecidable"
+1556296483␟bbd51eea␟52␟{"cit_type": "claim"}
+1556296882␟bbd51eea␟53␟{"cit_type": "claim", "bow4": "on", "pp4": "on"}
+1556298076␟bbd51eea␟54␟{"cit_type": "claim", "bow2": "on", "bow4": "on", "pp2": "on", "pp4": "on"}
+1556298240␟bbd51eea␟55␟{"cit_type": "claim", "bow2": "on", "bow3": "on", "pp2": "on", "pp3": "on"}
+1556298854␟bbd51eea␟56␟{"cit_type": "example", "bow2": "on", "pp2": "on"}
+1556299145␟bbd51eea␟57␟"pass"
+1556299303␟bbd51eea␟58␟{"syntactical": "on", "cit_type": "other"}
+1556299361␟bbd51eea␟59␟{"syntactical": "on", "cit_type": "other"}
+1556299761␟bbd51eea␟60␟{"cit_type": "ne", "bow1": "on", "pp1": "on", "np1": "on", "np2": "on"}
+1556299850␟bbd51eea␟61␟"undecidable"

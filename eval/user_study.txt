@@ -1,0 +1,138 @@
+# 100 and first 62:
+- - - all - - -
+Agreement on: 656/750
+Average observed agreement: 0.8746666666666667
+Krippendorff's alpha: 0.7704018367070932
+- - - type - - -
+Agreement on: 40/50
+Average observed agreement: 0.8
+Krippendorff's alpha: 0.7249235898860795
+- - - auth - - -
+Agreement on: 50/50
+Average observed agreement: 1.0
+Krippendorff's alpha: 1.0
+- - - synt - - -
+Agreement on: 50/50
+Average observed agreement: 1.0
+Krippendorff's alpha: 1.0
+- - - rel - - -
+Agreement on: 516/600
+Average observed agreement: 0.86
+Krippendorff's alpha: 0.5573000914269639
+
+        cl  ne  ex  ot
+claim   12  0   1   0
+ne      1   15  2   0
+example 2   1   9   1
+other   2   0   0   4
+
+
+### user: d4062c8c ###
+#
+## items judged: 100
+#
+# passed: 1
+# undecidable: 12
+# broken: 1
+#
+## remaining: 86
+## number of judgements: 1040
+#
+# with author: 7
+# syntactic: 5
+#
+# type claim: 21
+# type ne: 28
+# type other: 12
+# type example: 25
+#
+# bow Recall: 0.52 | MRR: 0.48 | MAP: 0.45 | NDCG: 0.49
+# pp Recall: 0.55 | MRR: 0.45 | MAP: 0.42 | NDCG: 0.47
+# np Recall: 0.31 | MRR: 0.30 | MAP: 0.28 | NDCG: 0.30
+
+measuring claim contexts only:
+# bow Recall: 0.64 | MRR: 0.53 | MAP: 0.51 | NDCG: 0.57
+# pp Recall: 0.71 | MRR: 0.48 | MAP: 0.44 | NDCG: 0.53
+# np Recall: 0.25 | MRR: 0.08 | MAP: 0.08 | NDCG: 0.12
+
+measuring NE contexts only:
+# bow Recall: 0.46 | MRR: 0.45 | MAP: 0.40 | NDCG: 0.44
+# pp Recall: 0.45 | MRR: 0.43 | MAP: 0.40 | NDCG: 0.43
+# np Recall: 0.49 | MRR: 0.50 | MAP: 0.45 | NDCG: 0.49
+
+measuring example contexts only:
+# bow Recall: 0.53 | MRR: 0.52 | MAP: 0.50 | NDCG: 0.53
+# pp Recall: 0.53 | MRR: 0.52 | MAP: 0.49 | NDCG: 0.52
+# np Recall: 0.14 | MRR: 0.14 | MAP: 0.14 | NDCG: 0.14
+
+measuring other contexts only:
+# bow Recall: 0.46 | MRR: 0.36 | MAP: 0.36 | NDCG: 0.40
+# pp Recall: 0.50 | MRR: 0.30 | MAP: 0.31 | NDCG: 0.35
+# np Recall: 0.40 | MRR: 0.40 | MAP: 0.37 | NDCG: 0.38
+
+
+### user: bbd51eea ###
+#
+## items judged: 62
+#
+# passed: 3
+# undecidable: 7
+# broken: 0
+#
+## remaining: 52
+## number of judgements: 625
+#
+# with author: 4
+# syntactic: 3
+#
+# type claim: 17
+# type ne: 17
+# type example: 13
+# type other: 5
+#
+# bow Recall: 0.48 | MRR: 0.44 | MAP: 0.41 | NDCG: 0.45
+# pp Recall: 0.51 | MRR: 0.43 | MAP: 0.40 | NDCG: 0.44
+# np Recall: 0.40 | MRR: 0.43 | MAP: 0.41 | NDCG: 0.42
+
+### user: all ###
+#
+## items judged: 162
+#
+# passed: 4
+# undecidable: 19
+# broken: 1
+#
+## remaining: 138
+## number of judgements: 1665
+#
+# with author: 11
+# syntactic: 8
+#
+# type claim: 38
+# type ne: 45
+# type other: 17
+# type example: 38
+#
+# bow Recall: 0.51 | MRR: 0.46 | MAP: 0.44 | NDCG: 0.48
+# pp Recall: 0.53 | MRR: 0.44 | MAP: 0.41 | NDCG: 0.46
+# np Recall: 0.35 | MRR: 0.35 | MAP: 0.33 | NDCG: 0.34
+
+measuring claim contexts only (38):
+# pp Recall:  0.63 | MRR: 0.46 | MAP: 0.42 | NDCG: 0.49
+# bow Recall: 0.58 | MRR: 0.48 | MAP: 0.46 | NDCG: 0.51
+# np Recall:  0.20 | MRR: 0.13 | MAP: 0.13 | NDCG: 0.15
+
+measuring NE contexts only (45):
+# pp Recall:  0.46 | MRR: 0.44 | MAP: 0.41 | NDCG: 0.44
+# bow Recall: 0.47 | MRR: 0.45 | MAP: 0.41 | NDCG: 0.45
+# np Recall:  0.52 | MRR: 0.53 | MAP: 0.48 | NDCG: 0.51
+
+measuring example contexts only (38):
+# pp Recall:  0.56 | MRR: 0.52 | MAP: 0.47 | NDCG: 0.52
+# bow Recall: 0.54 | MRR: 0.53 | MAP: 0.49 | NDCG: 0.54
+# np Recall:  0.21 | MRR: 0.24 | MAP: 0.24 | NDCG: 0.24
+
+measuring other contexts only (17):
+# pp Recall:  0.44 | MRR: 0.29 | MAP: 0.29 | NDCG: 0.33
+# bow Recall: 0.41 | MRR: 0.33 | MAP: 0.33 | NDCG: 0.36
+# np Recall:  0.50 | MRR: 0.50 | MAP: 0.44 | NDCG: 0.47

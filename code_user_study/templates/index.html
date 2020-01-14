@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    a { text-decoration: none; }
+    li { margin-bottom: 5px; }
+    body { background-color: #fcfcfc; }
+
+    /* https://www.w3schools.com/css/css_tooltip.asp */
+    /* Tooltip container */
+    .tooltip {
+      position: relative;
+      display: inline;
+      border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 400px;
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+      padding: 5px;
+      border-radius: 6px;
+      top: 100%;
+      left: 50%;
+      margin-left: 0px; /* Use half of the width (120/2 = 60), to center the tooltip */
+
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+</style>
+</head>
+<body>
+<br>
+<div style="width: 800px; margin: 0 auto; margin-bottom: 500px;">
+<form action="/{{ n }}/rate" method="POST">
+<table>
+    <tr>
+        <td colspan="3"><p style="color: #999; text-align: center;">{{ n }}/{{ num_items - 1 }}</p><p style="text-align: center; line-height: 1.5;">&ldquo;{{ context|safe }}&rdquo;</p></td>
+    </tr>
+    <tr>
+        <td colspan="3"><p style="text-align: center;"><a href="/{{ n }}/undecidable">not enough information</a>&emsp;/&emsp;<a href="/{{ n }}/pass">pass (I can't judge the relevance)</a></p>
+        <hr>
+        <p style="text-align: center;"><input type="checkbox" name="author_name"> <span title="Does the author's name appear in the citation context?">author name inc.</span>&emsp;<input type="checkbox" name="syntactical"> <span title="Does the cit. marker have a grammatical function?">marker has gramm. func.</span>&emsp;|&nbsp;citation type: <select name="cit_type">
+          <option value="not_given" selected>&emsp;</option>
+          <option value="ne">NE/concept</option>
+          <option value="claim">Claim</option>
+          <option value="example">Example</option>
+          <option value="other">Other</option>
+        </select></p>
+        <p><strong>check all relevant:</strong></p></td>
+    </tr>
+    <tr>
+        <td><p style="margin: 0">model 1</p></td>
+        <td><p style="margin: 0">model 2</p></td>
+        <td><p style="margin: 0">model 3</p></td>
+    </tr>
+    <tr>
+        <td>
+            <ol>
+                {% for rec in recs_bow %}
+                <li><input type="checkbox" name="bow{{ loop.index }}" onchange="sync(this)" class="{{ rec[0] }}">
+                <div class="tooltip">
+                <span class="tooltiptext">year: {{ rec[2] }}&emsp;citations: {{ rec[3] }}<br>{{ rec[4] }}</span>
+                <a href="https://academic.microsoft.com/paper/{{ rec[0] }}/">{{ rec[1] }}</a></div></li>
+                {% endfor %}
+            </ol>
+        </td>
+        <td>
+            <ol>
+                {% for rec in recs_pp %}
+                <li><input type="checkbox" name="pp{{ loop.index }}" onchange="sync(this)" class="{{ rec[0] }}">
+                <div class="tooltip">
+                <span class="tooltiptext">year: {{ rec[2] }}&emsp;citations: {{ rec[3] }}<br>{{ rec[4] }}</span>
+                <a href="https://academic.microsoft.com/paper/{{ rec[0] }}/">{{ rec[1] }}</a></div></li>
+                {% endfor %}
+            </ol>
+        </td>
+        <td>
+            <ol>
+                {% for rec in recs_np %}
+                <li><input type="checkbox" name="np{{ loop.index }}" onchange="sync(this)" class="{{ rec[0] }}">
+                <div class="tooltip">
+                <span class="tooltiptext">year: {{ rec[2] }}&emsp;citations: {{ rec[3] }}<br>{{ rec[4] }}</span>
+                <a href="https://academic.microsoft.com/paper/{{ rec[0] }}/">{{ rec[1] }}</a></div></li>
+                {% endfor %}
+                {% if recs_np|length == 0 %}
+                <p>Model not applicable</p>
+                {% endif %}
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3"><p style="text-align: center;"><input style="width: 100%" type="submit" value="Rate"></p>
+    </tr>
+    <tr>
+        <td colspan="3"><p style="text-align: center;"><a style="color: #bbb;" href="/{{ [n - 1,0]|max }}/">← prev</a>&emsp;<a style="color: #bbb;" href="/{{ [n + 1,num_items - 1]|min }}/">next →</a></p>
+    </tr>
+    <tr>
+        <td colspan="3"><p style="text-align: center;"><a style="color: #999;" href="/0/showmyratings">show my evaluation log</a></p>
+    </tr>
+</table>
+</form>
+</div>
+<script>
+function sync(checkboxElem) {
+  nakama = document.getElementsByClassName(checkboxElem.className);
+  for (i=0; i<nakama.length; i++) {
+    nakama[i].checked = checkboxElem.checked;
+    }
+}
+</script>
+</body>
+</html>
