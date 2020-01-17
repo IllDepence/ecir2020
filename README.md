@@ -25,7 +25,7 @@ Source code and evaluation details for the ECIR 2020 paper *Semantic Modelling o
   author        = {Tarek Saier and
                    Michael F{\"{a}}rber},
   title         = {{Semantic Modelling of Citation Contexts for Context-aware Citation Recommendation}},
-  booktitle     = {Proceedings of the 42th European Conference on Information Retrieval},
+  booktitle     = {Proceedings of the 42nd European Conference on Information Retrieval},
   pages         = {},
   year          = {2020},
   month         = apr,
