@@ -1,0 +1,19 @@
+Models: BoW, Claim+BoW
+Metric: NDCG@5
+Results:
+
+data set    student's t-test [1]  permutation test [2]
+            t       p             p
+
+arXiv       -121    0             0
+MAG         -45     0             0
+RefSeer     -24     5.4e-129      0
+ACL-ARC     0.586   0.558         0.9167
+
+- - -
+
+[1] scipy.stats.ttest_rel
+[2] mlxtend.evaluate.permutation_test
+       method='approximate'
+       num_rounds=10000
+       seed=0
