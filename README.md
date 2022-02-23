@@ -13,6 +13,7 @@ Source code and evaluation details for the ECIR 2020 paper [*Semantic Modelling 
 * Evaluation settings
     * Offline (citation re-prediction)
         * code: `code_offline_eval/`
+        * data: [10.5281/zenodo.6243291](https://doi.org/10.5281/zenodo.6243291)
         * details: `eval/offline_eval*`
     * User study
         * code: `code_user_study/`
